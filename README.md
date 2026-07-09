@@ -1,4 +1,4 @@
-# Bite Sense 🥗 (MERN)
+# Bite Sense 🥗 
 
 AI-powered restaurant nutrition assistant. Upload a menu, get every dish ranked
 against your personal health profile — with a plain-English reason for every score.

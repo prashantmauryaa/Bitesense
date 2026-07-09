@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: bitesense
+    env: node
+    plan: free
+    buildCommand: "npm run install:all && npm run build"
+    startCommand: "node server/server.js"
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false
+      - key: BS_SECRET
+        generateValue: true
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: CLIENT_ORIGIN
+        value: "*"

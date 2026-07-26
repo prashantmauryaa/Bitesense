@@ -4,7 +4,7 @@ async function create(req, res) {
   const { dish, restaurantName } = req.body || {};
   if (!dish || !dish.name) return res.status(400).json({ error: 'Nothing to save.' });
 
-  const meal = await Meal.create({
+  const meal = await Meal.create({ 
     userId: req.user._id,
     restaurantName: String(restaurantName || ''),
     dish,
